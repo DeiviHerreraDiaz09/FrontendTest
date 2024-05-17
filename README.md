@@ -38,7 +38,7 @@ npm run dev
 ```
 Abre tu navegador y ve a http://localhost:5173 para ver la aplicación en funcionamiento.
 
-## PROYECTO 1
+## PROYECTO 1 - **QrCode**
 
 ![QR1](https://github.com/DeiviHerreraDiaz09/FrontendTest/assets/154428353/f3342024-d943-448e-8db8-9fe1759088bf)
 
