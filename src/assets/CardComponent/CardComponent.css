@@ -17,13 +17,13 @@
 
 .card {
     width: 15.5rem;
-    height: 27rem;
+    height: 28rem;
     border-radius: 15px;
     background-color: hsl(216, 50%, 16%);
     -webkit-box-shadow: 0px 19px 16px 5px rgba(9, 20, 36, 1);
     -moz-box-shadow: 0px 19px 16px 5px rgba(9, 20, 36, 1);
     box-shadow: 0px 19px 16px 5px rgba(9, 20, 36, 1);
-    padding: 2%;
+    padding: 1%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -38,13 +38,58 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
 }
+
+.cardImage::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: background-color 0.3s;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.cardImage:hover::before {
+    background-color: hsl(178, 100%, 50%);
+    opacity: 0.5;
+}
+
+.cardImage::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("images/icon-view.svg");
+    /* Imagen al pasar el cursor */
+    background-size: 20%;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.cardImage:hover::after {
+    opacity: 1;
+}
+
 
 h4 {
     color: white;
     font-size: 17px;
     font-weight: 500;
     font-family: "fontCard";
+    cursor: pointer;
+}
+
+h4:hover {
+    color: hsl(178, 100%, 50%);
 }
 
 h6 {
@@ -130,4 +175,9 @@ hr {
 
 .highlight {
     font-weight: 300;
+    cursor: pointer;
+}
+
+.highlight:hover {
+    color: hsl(178, 100%, 50%);
 }
