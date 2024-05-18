@@ -43,3 +43,11 @@ Abre tu navegador y ve a http://localhost:5173 para ver la aplicación en funcio
 ![QR1](https://github.com/DeiviHerreraDiaz09/FrontendTest/assets/154428353/f3342024-d943-448e-8db8-9fe1759088bf)
 
 ![QR3](https://github.com/DeiviHerreraDiaz09/FrontendTest/assets/154428353/ff8af4c2-1987-45ac-9a72-ae423231e2fd)
+
+## PROYECTO 2 - **Card**
+
+![Card1](https://github.com/DeiviHerreraDiaz09/FrontendTest/assets/154428353/402cc28b-73fb-4378-8a7b-eab361a15368)
+
+![Card2](https://github.com/DeiviHerreraDiaz09/FrontendTest/assets/154428353/b54035cd-671a-4792-9b2d-06061ebd2c3b)
+
+![Card3](https://github.com/DeiviHerreraDiaz09/FrontendTest/assets/154428353/dfab90a0-0581-4446-a4ee-d29b436e5b28)
