@@ -97,17 +97,21 @@ h6 {
     font-weight: 100;
 }
 
-p {
+/* DESCOMENTAR ESTA PARTE */
+
+/* p {
     color: hsl(0, 0%, 100%);
     font-size: 13.5px;
     font-weight: 100;
     font-family: "fontCard";
-}
+} */
 
-hr {
+/* DESCOMENTAR ESTA PARTE */
+
+/* hr {
     color: hsl(215, 32%, 27%);
     border: 1px solid;
-}
+} */
 
 /* More Information */
 

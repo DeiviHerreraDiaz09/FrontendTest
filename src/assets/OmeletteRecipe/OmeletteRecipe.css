@@ -1,3 +1,155 @@
+@font-face {
+    font-family: recipeFamily;
+    src: url("fonts/outfit/Outfit-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: recipeFamily2;
+    src: url("fonts/young-serif/YoungSerif-Regular.ttf");
+}
+
+
 .omeletterecipe {
-  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: hsl(30, 54%, 90%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    color: black;
+    font-family: recipeFamily;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+
+.recipe {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    width: 40%;
+    border-radius: 15px;
+    background-color: hsl(0, 0%, 100%);
+    padding: 2%;
+}
+
+.recipeImg {
+    width: 100%;
+    height: 15rem;
+    border-radius: 15px;
+    background-image: url("images/image-omelette.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tittleRecipe {
+    font-family: recipeFamily2;
+    font-weight: 500;
+    color: hsl(24, 5%, 18%);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.preparationTime {
+    width: 100%;
+    height: 10rem;
+    border-radius: 15px;
+    background-color: #f2d8d8;
+    padding: 4%;
+    font-family: recipeFamily;
+    font-size: 14px;
+}
+
+.preparationTime>h3 {
+    margin-bottom: 15px;
+    color: hsl(332, 51%, 32%);
+}
+
+.preparationTime>ul {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.TitleSection {
+    font-family: recipeFamily2;
+    font-weight: 200;
+    color: hsl(14, 45%, 36%);
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.IngredientsSection {
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: recipeFamily;
+    font-size: 14px;
+}
+
+.InstructionsSection {
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: recipeFamily;
+    font-size: 14px;
+}
+
+table {
+    width: 100%;
+    font-family: recipeFamily;
+    font-size: 14px;
+}
+
+td {
+    padding: 10px;
+    text-align: left;
+    font-size: 16px;
+    border-bottom: 1px solid #ccc;
+    font-family: recipeFamily;
+    font-size: 14px;
+}
+
+td:nth-child(2) {
+    font-weight: bold;
+    color: hsl(14, 45%, 36%);
+    font-family: recipeFamily;
+    font-size: 14px;
+}
+
+
+ul {
+    list-style: none;
+}
+
+ul li::before {
+    content: "•";
+    color: hsl(332, 51%, 32%);
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+ol li {
+    counter-increment: item;
+    list-style: none;
+}
+
+ol li::before {
+    content: counter(item) ". ";
+    color: hsl(332, 51%, 32%);
+    font-weight: bold;
+    margin-left: -15px;
+}
+
+.spanGray {
+    color: hsl(24, 5%, 18%);
+    font-weight: 600;
 }
