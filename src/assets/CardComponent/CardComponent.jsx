@@ -1,6 +1,6 @@
 import "./CardComponent.css";
 
-const CardComponent = ({}) => {
+const CardComponent = ({ }) => {
   return (
     <div className="cardcomponent">
       <div className="card">
