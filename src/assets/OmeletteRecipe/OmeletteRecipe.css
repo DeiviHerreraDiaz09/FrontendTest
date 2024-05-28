@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
     font-family: recipeFamily;
     src: url("fonts/outfit/Outfit-VariableFont_wght.ttf");
 }
@@ -152,4 +152,4 @@ ol li::before {
 .spanGray {
     color: hsl(24, 5%, 18%);
     font-weight: 600;
-}
+} */
