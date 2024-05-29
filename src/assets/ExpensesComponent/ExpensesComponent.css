@@ -1,3 +1,13 @@
+@font-face {
+    font-family: ExpensesProjet;
+    src: url("../ExpensesComponent/fonts/DMSans_24pt-Thin.ttf");
+}
+
+@font-face {
+    font-family: ExpensesProjetBold;
+    src: url("../ExpensesComponent/fonts/DMSans_24pt-Bold.ttf");
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -5,62 +15,117 @@
 }
 
 .expensescomponent {
-    background-color: hsl(27, 66%, 92%);
-    height: 100vh;
-    width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     gap: 20px;
+    height: 100vh;
+    width: 100%;
+    background-color: hsl(27, 66%, 92%);
 }
 
 .myBalance {
-    /* border: 1px solid; */
     display: grid;
     grid-template-columns: 70% 30%;
-    border-radius: 20px;
-    background-color: hsl(10, 79%, 65%);
     width: 35rem;
     height: 6rem;
+    border-radius: 20px;
+    background-color: hsl(10, 79%, 65%);
 }
 
 .count {
     padding: 5%;
     margin-left: 10px;
-    /* border: 1px solid; */
     color: white;
 }
 
 .count>h3 {
-    font-weight: 100;
+    font-weight: 600;
+    font-family: ExpensesProjet;
 }
 
+.count>h1 {
+    font-family: ExpensesProjetBold;
+}
 
 .logo {
+    width: 100%;
+    height: 100%;
     background-image: url("/src/assets/ExpensesComponent/images/logo.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 40%;
-    width: 100%;
-    height: 100%;
 }
 
-/* ----------------- */
-
 .cardBalance {
+    width: 35rem;
+    height: 29rem;
+    padding: 2%;
+    font-family: ExpensesProjetBold;
     border-radius: 20px;
     background-color: hsl(33, 100%, 98%);
-    width: 35rem;
-    height: 26rem;
-    padding: 2%;
+}
 
+.cardBalance>h1 {
+    font-weight: 100;
+    color: hsl(25, 47%, 15%);
+}
+
+hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+    border-top: 0.5px solid hsl(30, 3%, 87%);
 }
 
 .columns {
     width: 100%;
-    border: 1px solid;
     height: 15rem;
+    border: 1px solid;
+}
+
+.totalMonth {
     display: grid;
-    grid-template-columns: 14.28% 14.28% 14.28% 14.28% 14.28% 14.28% 14.28%;
+    grid-template-columns: 70% 30%;
+    width: 100%;
+    height: 25%;
+}
+
+.total {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15px;
+}
+
+.total>h3 {
+    font-family: ExpensesProjet;
+    font-weight: 800;
+    color: hsl(28, 10%, 53%);
+}
+
+.total>h1 {
+    font-family: ExpensesProjetBold;
+    font-weight: 800;
+    color: hsl(25, 47%, 15%);
+}
+
+.percentage {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+}
+
+.percentage>h3:nth-of-type(1) {
+    color: hsl(25, 47%, 15%);
+    font-weight: 700;
+    font-family: ExpensesProjetBold;
+}
+
+.percentage>h3:nth-of-type(2) {
+    color: hsl(28, 10%, 53%);
+    font-weight: 700;
+    font-family: ExpensesProjet;
 }

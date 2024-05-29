@@ -14,8 +14,7 @@ import "./ExpensesComponent.css";
 const ExpensesComponent = () => {
   const [data, setData] = useState([]);
   const [money, setMoney] = useState(Number);
-
-  console.log("Esta es la plata", money);
+  const [hoveredTotal, setHoveredTotal] = useState(0);
 
   const calculateTotal = (data) => {
     let totalCount = 0;
@@ -84,6 +83,17 @@ const ExpensesComponent = () => {
       legend: {
         display: false,
       },
+      tooltip: {
+        enabled: true,
+      },
+    },
+    onHover: (event, chartElement) => {
+      if (chartElement.length) {
+        const index = chartElement[0].index;
+        setHoveredTotal(data[index].total);
+      } else {
+        setHoveredTotal(0);
+      }
     },
   };
 
@@ -116,6 +126,17 @@ const ExpensesComponent = () => {
         )}
 
         <hr />
+
+        <div className="totalMonth">
+          <div className="total">
+            <h3>Total this month</h3>
+            <h1>{hoveredTotal}</h1>
+          </div>
+          <div className="percentage">
+            <h3>+2.4%</h3>
+            <h3>From last month</h3>
+          </div>
+        </div>
       </div>
     </div>
   );
