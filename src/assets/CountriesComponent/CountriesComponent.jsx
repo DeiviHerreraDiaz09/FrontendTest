@@ -1,6 +1,22 @@
+import { useState } from "react";
 import "./CountriesComponent.css";
+import { useEffect } from "react";
 
 const CountriesComponent = ({}) => {
+  const [dataCountries, setDataCountries] = useState([]);
+
+  console.log(dataCountries);
+
+  useEffect(() => {
+    const loadData = () => {
+      fetch('/src/assets/CountriesComponent/data.json')
+        .then(response => response.json())
+        .then(data => setDataCountries(data)); 
+    };
+
+    loadData();
+  }, []);
+
   return (
     <div className="countriescomponent">
       <header>
@@ -33,12 +49,23 @@ const CountriesComponent = ({}) => {
         </div>
       </div>
 
-      <div className="countriesList"></div>
-
-
+      <div className="countriesList">
+        {dataCountries.map(countrie => (
+          <div className="cardCountries" key={countrie.name}>
+            <div className="imgCountrie">
+              <img src={countrie.flag} alt="" />
+            </div>
+            <div className="infoCountrie">
+              <h4 className="countrieTittle">{countrie.name}</h4>
+              <h4>Population: {countrie.population}</h4>
+              <h4>Region: {countrie.region}</h4>
+              <h4>Capital: {countrie.capital}</h4>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
-
 
 export default CountriesComponent;
