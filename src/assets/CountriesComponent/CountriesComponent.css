@@ -1,3 +1,18 @@
+@font-face {
+    font-family: CountriesOne;
+    src: url("/src/assets/CountriesComponent/fonts/NunitoSans_7pt-Light.ttf");
+}
+
+@font-face {
+    font-family: CountriesTwo;
+    src: url("/src/assets/CountriesComponent/fonts/NunitoSans_7pt-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: CountriesThree;
+    src: url("/src/assets/CountriesComponent/fonts/NunitoSans_7pt_Condensed-ExtraBold.ttf");
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -20,11 +35,11 @@ header {
     margin-bottom: 15px;
 }
 
-header >h1,
+header>h1,
 h3 {
     display: flex;
     align-items: center;
-    margin-left: 15px;
+    margin-left: 30 px;
 }
 
 
@@ -92,12 +107,9 @@ h3 {
     padding: 2%;
 }
 
-/* Mapear paises */
-
 .countriesList {
     margin-top: 20px;
     width: 100%;
-    border: 1px solid;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -110,8 +122,8 @@ h3 {
     display: grid;
     grid-template-rows: 50% 50%;
     border-radius: 15px;
-    border: 1px solid;
-overflow: hidden; /* Agrega esta línea */
+    overflow: hidden;
+    box-shadow: 1px 8px 15px -10px rgba(0, 0, 0, 0.75);
 }
 
 .imgCountrie {
@@ -121,6 +133,7 @@ overflow: hidden; /* Agrega esta línea */
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .imgCountrie>img {
@@ -130,13 +143,13 @@ overflow: hidden; /* Agrega esta línea */
     object-position: center;
 }
 
-.countrieTittle{
+.countrieTittle {
     font-size: 22px;
 }
 
-.infoCountrie{
+.infoCountrie {
 
-   margin: 15px;
+    margin: 15px;
     display: flex;
     flex-direction: column;
     gap: 5px;

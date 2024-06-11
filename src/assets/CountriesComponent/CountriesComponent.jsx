@@ -4,14 +4,34 @@ import { useEffect } from "react";
 
 const CountriesComponent = ({}) => {
   const [dataCountries, setDataCountries] = useState([]);
+  const [uniqueRegions, setUniqueRegions] = useState([]);
+  const [selectedRegion, setSelectedRegion] = useState("");
+  const [searchCountrie, setSearchCountrie] = useState("");
 
-  console.log(dataCountries);
+  const handleRegionChange = (event) => {
+    setSelectedRegion(event.target.value);
+  };
+
+  const handleCountrieChange = (event) => {
+    setSearchCountrie(event.target.value);
+  };
+
+  const filteredCountries = dataCountries.filter((countrie) => {
+    return (
+      (!selectedRegion || countrie.region === selectedRegion) &&
+      countrie.name.toLowerCase().includes(searchCountrie.toLowerCase())
+    );
+  });
 
   useEffect(() => {
     const loadData = () => {
-      fetch('/src/assets/CountriesComponent/data.json')
-        .then(response => response.json())
-        .then(data => setDataCountries(data)); 
+      fetch("/src/assets/CountriesComponent/data.json")
+        .then((response) => response.json())
+        .then((data) => {
+          setDataCountries(data);
+          const regions = [...new Set(data.map((countrie) => countrie.region))];
+          setUniqueRegions(regions);
+        });
     };
 
     loadData();
@@ -31,26 +51,40 @@ const CountriesComponent = ({}) => {
         <div className="search">
           <div className="inputModified">
             <div className="loupeImg"></div>
-            <input type="text" placeholder="Search for a country..." />
+            <input
+              type="text"
+              placeholder="Search for a country..."
+              value={searchCountrie}
+              onChange={handleCountrieChange}
+            />
           </div>
         </div>
 
         <div className="filterRegions">
-          <select name="regions" className="regions">
+          <select
+            name="regions"
+            className="regions"
+            onChange={handleRegionChange}
+          >
             <option selected disabled value="0">
               Filter By Region
             </option>
-            <option value="Africa">Africa</option>
-            <option value="America">America</option>
-            <option value="Asia">Asia</option>
-            <option value="Europe">Europe</option>
-            <option value="Oceania">Oceania</option>
+            <option selected value="">
+              Todas las regiones
+            </option>
+            {uniqueRegions.map((region) => (
+              <>
+                <option key={region} value={region}>
+                  {region}
+                </option>
+              </>
+            ))}
           </select>
         </div>
       </div>
 
       <div className="countriesList">
-        {dataCountries.map(countrie => (
+        {filteredCountries.map((countrie) => (
           <div className="cardCountries" key={countrie.name}>
             <div className="imgCountrie">
               <img src={countrie.flag} alt="" />
