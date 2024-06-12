@@ -2,11 +2,13 @@ import { useState } from "react";
 import "./CountriesComponent.css";
 import { useEffect } from "react";
 
-const CountriesComponent = ({}) => {
+const CountriesComponent = () => {
   const [dataCountries, setDataCountries] = useState([]);
   const [uniqueRegions, setUniqueRegions] = useState([]);
   const [selectedRegion, setSelectedRegion] = useState("");
   const [searchCountrie, setSearchCountrie] = useState("");
+
+  console.log(dataCountries);
 
   const handleRegionChange = (event) => {
     setSelectedRegion(event.target.value);
@@ -43,7 +45,7 @@ const CountriesComponent = ({}) => {
         <h1>Where in the world?</h1>
         <div className="modeScreen">
           <div className="moonMood"></div>
-          <h3>Dark Mode</h3>
+          <h3 className="tittleDarkMode">Dark Mode</h3>
         </div>
       </header>
 
@@ -91,9 +93,15 @@ const CountriesComponent = ({}) => {
             </div>
             <div className="infoCountrie">
               <h4 className="countrieTittle">{countrie.name}</h4>
-              <h4>Population: {countrie.population}</h4>
-              <h4>Region: {countrie.region}</h4>
-              <h4>Capital: {countrie.capital}</h4>
+              <h4>
+                Population: {countrie.population.toLocaleString("de-DE")}
+              </h4>
+              <h4>
+                Region: {countrie.region}
+              </h4>
+              <h4>
+                Capital: {countrie.capital}
+              </h4>
             </div>
           </div>
         ))}

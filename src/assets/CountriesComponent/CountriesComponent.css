@@ -19,7 +19,6 @@
     box-sizing: border-box;
 }
 
-
 .countriescomponent {
     width: 100%;
     height: 100vh;
@@ -35,18 +34,34 @@ header {
     margin-bottom: 15px;
 }
 
-header>h1,
-h3 {
+header>h1 {
+    font-family: CountriesThree;
     display: flex;
     align-items: center;
-    margin-left: 30 px;
+    margin-left: 30px;
 }
 
+header>h3 {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
 
 .modeScreen {
     display: flex;
+    align-items: center;
     height: 100%;
     width: 13rem;
+}
+
+.moonMood{
+    cursor: pointer;
+    width: 20%;
+    height: 50%;
+    background-size: 45%;
+    background-image: url("/src/assets/CountriesComponent/images/moon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .filters {
@@ -148,9 +163,19 @@ h3 {
 }
 
 .infoCountrie {
-
     margin: 15px;
     display: flex;
     flex-direction: column;
     gap: 5px;
+}
+
+.infoCountrie>h4:nth-child(1){
+    font-size: 20px;
+    font-family: CountriesThree;
+}
+
+.infoCountrie>h4:nth-child(n+2) {
+    font-family: CountriesTwo;
+    font-weight: 500;
+    font-size: 15px;
 }
