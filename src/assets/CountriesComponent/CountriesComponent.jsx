@@ -1,14 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./CountriesComponent.css";
-import { useEffect } from "react";
 
 const CountriesComponent = () => {
   const [dataCountries, setDataCountries] = useState([]);
   const [uniqueRegions, setUniqueRegions] = useState([]);
   const [selectedRegion, setSelectedRegion] = useState("");
   const [searchCountrie, setSearchCountrie] = useState("");
-
-  console.log(dataCountries);
 
   const handleRegionChange = (event) => {
     setSelectedRegion(event.target.value);
@@ -88,7 +85,7 @@ const CountriesComponent = () => {
       <div className="countriesList">
         {filteredCountries.map((countrie) => (
           <div className="cardCountries" key={countrie.name}>
-            <div className="imgCountrie">
+            <div className="imgCountrie" onClick={() => handleNavigate()}>
               <img src={countrie.flag} alt="" />
             </div>
             <div className="infoCountrie">
