@@ -12,12 +12,12 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route path="/" element={<CountriesComponent />} />
+        <Route path="/Countries" element={<CountriesComponent />} />
         <Route path="/qr" element={<QrCode />} />
         <Route path="/card" element={<CardComponent />} />
         <Route path="/omelette" element={<OmeletteRecipe />} />
         <Route path="/expenses" element={<ExpensesComponent />} />
-        <Route path="/infoCountrie" element={<InfoCountrieComponentfrom />} />
+        <Route path="/infoCountrie/:countryName" element={<InfoCountrieComponentfrom />} />
       </Routes>
     </Router>
   </React.StrictMode>

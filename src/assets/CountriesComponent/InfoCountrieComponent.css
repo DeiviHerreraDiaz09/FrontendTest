@@ -1,0 +1,130 @@
+@font-face {
+    font-family: CountriesOne;
+    src: url("/src/assets/CountriesComponent/fonts/NunitoSans_7pt-Light.ttf");
+}
+
+@font-face {
+    font-family: CountriesTwo;
+    src: url("/src/assets/CountriesComponent/fonts/NunitoSans_7pt-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: CountriesThree;
+    src: url("/src/assets/CountriesComponent/fonts/NunitoSans_7pt_Condensed-ExtraBold.ttf");
+}
+
+.InfoCountrieComponent {
+    height: 100vh;
+    width: 100%;
+}
+
+.backButton {
+    width: 10rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 8px 15px -10px rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+}
+
+.arrowLeftImg {
+    background-image: url("/src/assets/CountriesComponent/images/arrowLeft.svg");
+    width: 40%;
+    background-size: 30%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.backButton>button {
+    font-size: 15px;
+    font-family: CountriesTwo;
+    height: 50%;
+    width: 50%;
+    background-color: hsl(0, 0%, 100%);
+    border: none;
+    text-align: start;
+    cursor: pointer;
+}
+
+.informationCountrie {
+    width: 100%;
+    height: 70%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.flagCountrie {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.flagCountrie>img {
+    width: 60%;
+    height: 60%;
+}
+
+.information {
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
+.information>h1 {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.containerInformation {
+    font-size: 13px;
+    font-family: CountriesTwo;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 40px;
+}
+
+.columnOne,
+.columnTwo {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.borderCountries {
+    align-items: center;
+    font-size: 13px;
+    font-family: CountriesTwo;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.borderCou {
+    width: 6rem;
+    height: 2rem;
+    border: 1px solid;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 1px 8px 20px -9px rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tittleBold{
+    font-family: CountriesThree;
+}

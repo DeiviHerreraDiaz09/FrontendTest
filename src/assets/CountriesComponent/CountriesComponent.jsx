@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./CountriesComponent.css";
 
 const CountriesComponent = () => {
@@ -6,6 +7,12 @@ const CountriesComponent = () => {
   const [uniqueRegions, setUniqueRegions] = useState([]);
   const [selectedRegion, setSelectedRegion] = useState("");
   const [searchCountrie, setSearchCountrie] = useState("");
+  const [darkMode, setDarkMode] = useState(() => {
+    const savedDarkMode = localStorage.getItem("darkMode");
+    return savedDarkMode !== null ? JSON.parse(savedDarkMode) : false;
+  });
+
+  const navigate = useNavigate();
 
   const handleRegionChange = (event) => {
     setSelectedRegion(event.target.value);
@@ -13,6 +20,18 @@ const CountriesComponent = () => {
 
   const handleCountrieChange = (event) => {
     setSearchCountrie(event.target.value);
+  };
+
+  const handleCountrySelect = (country) => {
+    navigate(`/infoCountrie/${country.name}`);
+  };
+
+  const handleDarkModeToggle = () => {
+    setDarkMode((prevDarkMode) => {
+      const newDarkMode = !prevDarkMode;
+      localStorage.setItem("darkMode", JSON.stringify(newDarkMode));
+      return newDarkMode;
+    });
   };
 
   const filteredCountries = dataCountries.filter((countrie) => {
@@ -37,10 +56,10 @@ const CountriesComponent = () => {
   }, []);
 
   return (
-    <div className="countriescomponent">
+    <div className={`countriescomponent ${darkMode ? "dark" : ""}`}>
       <header>
         <h1>Where in the world?</h1>
-        <div className="modeScreen">
+        <div className="modeScreen" onClick={handleDarkModeToggle}>
           <div className="moonMood"></div>
           <h3 className="tittleDarkMode">Dark Mode</h3>
         </div>
@@ -72,11 +91,9 @@ const CountriesComponent = () => {
               Todas las regiones
             </option>
             {uniqueRegions.map((region) => (
-              <>
-                <option key={region} value={region}>
-                  {region}
-                </option>
-              </>
+              <option key={region} value={region}>
+                {region}
+              </option>
             ))}
           </select>
         </div>
@@ -84,20 +101,25 @@ const CountriesComponent = () => {
 
       <div className="countriesList">
         {filteredCountries.map((countrie) => (
-          <div className="cardCountries" key={countrie.name}>
-            <div className="imgCountrie" onClick={() => handleNavigate()}>
+          <div
+            className="cardCountries"
+            key={countrie.name}
+            onClick={() => handleCountrySelect(countrie)}
+          >
+            <div className="imgCountrie">
               <img src={countrie.flag} alt="" />
             </div>
             <div className="infoCountrie">
               <h4 className="countrieTittle">{countrie.name}</h4>
               <h4>
-                Population: {countrie.population.toLocaleString("de-DE")}
+                <span className="tittleBold">Population:</span>
+                {countrie.population.toLocaleString("de-DE")}
               </h4>
               <h4>
-                Region: {countrie.region}
+                <span className="tittleBold">Region:</span> {countrie.region}
               </h4>
               <h4>
-                Capital: {countrie.capital}
+                <span className="tittleBold">Capital:</span> {countrie.capital}
               </h4>
             </div>
           </div>
