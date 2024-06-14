@@ -45,23 +45,12 @@ Abre tu navegador y ve a http://localhost:5173 para ver la aplicación en funcio
 ![QR3](https://github.com/DeiviHerreraDiaz09/FrontendTest/assets/154428353/ff8af4c2-1987-45ac-9a72-ae423231e2fd)
 
 ## PROYECTO 2 - [**Card**](https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U)
-
-![Card1](https://github.com/DeiviHerreraDiaz09/FrontendTest/assets/154428353/402cc28b-73fb-4378-8a7b-eab361a15368)
-
-![Card2](https://github.com/DeiviHerreraDiaz09/FrontendTest/assets/154428353/b54035cd-671a-4792-9b2d-06061ebd2c3b)
-
-![Card3](https://github.com/DeiviHerreraDiaz09/FrontendTest/assets/154428353/dfab90a0-0581-4446-a4ee-d29b436e5b28)
+![Card Final](https://github.com/DeiviHerreraDiaz09/FrontendTest/assets/154428353/667e3aed-ed5c-4b88-93d1-d070ec7a0c43)
 
 ## PROYECTO 3 - [**Recipe Food**](https://www.frontendmentor.io/challenges/recipe-page-KiTsR8QQKm)
-
-![Recipe1](https://github.com/DeiviHerreraDiaz09/FrontendTest/assets/154428353/98ecc4f8-f088-48fe-bf3f-4a19d109e1f7)
-
-![Recipe2](https://github.com/DeiviHerreraDiaz09/FrontendTest/assets/154428353/4454a7c5-9138-4484-969d-af950173c2e3)
-
-![Recipe3](https://github.com/DeiviHerreraDiaz09/FrontendTest/assets/154428353/96240d61-fab4-4c5b-95e9-89b0ccce0455)
+![OmeletteRecipe Final](https://github.com/DeiviHerreraDiaz09/FrontendTest/assets/154428353/cc7f8ce4-79e9-4753-bcf7-ba168730872c)
 
 ## PROYECTO 4 - [**Expenses**](https://www.frontendmentor.io/challenges/expenses-chart-component-e7yJBUdjwt)
-
 ![recording-2024-05-29-08-31-48](https://github.com/DeiviHerreraDiaz09/FrontendTest/assets/154428353/fcdf84ce-2013-4081-aefd-f0e87731fcfc)
 
 ## PROYECTO 5 - [**Countries Api**](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca)
