@@ -77,7 +77,6 @@ const CountriesComponent = () => {
             />
           </div>
         </div>
-
         <div className="filterRegions">
           <select
             name="regions"
@@ -112,7 +111,7 @@ const CountriesComponent = () => {
             <div className="infoCountrie">
               <h4 className="countrieTittle">{countrie.name}</h4>
               <h4>
-                <span className="tittleBold">Population:</span>
+                <span className="tittleBold">Population: </span>
                 {countrie.population.toLocaleString("de-DE")}
               </h4>
               <h4>

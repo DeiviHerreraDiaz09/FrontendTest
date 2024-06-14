@@ -18,6 +18,48 @@
     width: 100%;
 }
 
+.InfoCountrieComponent.dark {
+    background-color: hsl(207, 26%, 17%);
+    color: white;
+}
+
+.InfoCountrieComponent.dark header {
+    background-color: hsl(209, 23%, 22%);
+}
+
+.InfoCountrieComponent.dark .inputModified {
+    background-color: hsl(209, 23%, 22%);
+    color: white;
+}
+
+.InfoCountrieComponent.dark header .moonMood {
+    background-image: url("/src/assets/CountriesComponent/images/moonTwo.svg");
+}
+
+.InfoCountrieComponent.dark .regions {
+    background-color: hsl(209, 23%, 22%);
+    color: white;
+}
+
+.InfoCountrieComponent.dark .cardCountries {
+    background-color: hsl(209, 23%, 22%);
+    color: white;
+}
+
+.InfoCountrieComponent.dark .countriesList {
+    background-color: hsl(207, 26%, 17%);
+    color: white;
+}
+
+.InfoCountrieComponent.dark .backButton>button {
+    color: white;
+    background-color: hsl(207, 26%, 17%);
+}
+
+.InfoCountrieComponent.dark .arrowLeftImg {
+    background-image: url("/src/assets/CountriesComponent/images/arrowLeftTwo.svg");
+}
+
 .backButton {
     width: 10rem;
     height: 2.5rem;
@@ -38,7 +80,6 @@
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
-
 }
 
 .backButton>button {
@@ -125,6 +166,6 @@
     align-items: center;
 }
 
-.tittleBold{
+.tittleBold {
     font-family: CountriesThree;
 }
