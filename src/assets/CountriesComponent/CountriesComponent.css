@@ -1,3 +1,9 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 .countriescomponent {
     width: 100%;
     background-color: hsl(0, 0%, 98%);
