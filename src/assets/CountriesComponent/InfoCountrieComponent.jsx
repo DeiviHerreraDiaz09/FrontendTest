@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./InfoCountrieComponent.css";
+import stylesCountries from "./CountriesComponent.module.css";
+import stylesCountriesTwo from "./InfoCountrieComponent.module.css"
 import { useParams } from "react-router-dom";
 
 const InfoCountrieComponent = () => {
@@ -37,60 +38,60 @@ const InfoCountrieComponent = () => {
   }, []);
 
   return (
-    <div className={`InfoCountrieComponent ${isDarkMode ? "dark" : ""}`}>
+    <div className={`${stylesCountriesTwo.InfoCountrieComponent} ${isDarkMode ? stylesCountriesTwo.dark : ""}`}>
       <header>
         <h1>Where in the world?</h1>
-        <div className="modeScreen" onClick={toggleDarkMode}>
-          <div className="moonMood"></div>
-          <h3 className="tittleDarkMode">Dark Mode</h3>
+        <div className={stylesCountriesTwo.modeScreen} onClick={toggleDarkMode}>
+          <div className={stylesCountriesTwo.moonMood}></div>
+          <h3 className={stylesCountries.tittleDarkMode}>Dark Mode</h3>
         </div>
       </header>
 
-      <div className="backButton" onClick={handleRedirection}>
-        <div className="arrowLeftImg"></div>
+      <div className={stylesCountriesTwo.backButton} onClick={handleRedirection}>
+        <div className={stylesCountriesTwo.arrowLeftImg}></div>
         <button>Back</button>
       </div>
 
-      <div className="informationCountrie">
-        <div className="flagCountrie">
+      <div className={stylesCountriesTwo.informationCountrie}>
+        <div className={stylesCountriesTwo.flagCountrie}>
           <img src={countrie.flag} alt="" />
         </div>
-        <div className="information">
+        <div className={stylesCountriesTwo.information}>
           <h1>{countrie.name}</h1>
 
-          <section className="containerInformation">
-            <div className="columnOne">
+          <section className={stylesCountriesTwo.containerInformation}>
+            <div className={stylesCountriesTwo.columnOne}>
               <h3>
-                <span className="tittleBold">Native Name:</span>{" "}
+                <span className={stylesCountriesTwo.tittleBold}>Native Name:</span>{" "}
                 {countrie.nativeName}
               </h3>
               <h3>
-                <span className="tittleBold">Population:</span>{" "}
+                <span className={stylesCountriesTwo.tittleBold}>Population:</span>{" "}
                 {countrie.population}
               </h3>
               <h3>
-                <span className="tittleBold">Region:</span> {countrie.region}
+                <span className={stylesCountriesTwo.tittleBold}>Region:</span> {countrie.region}
               </h3>
               <h3>
-                <span className="tittleBold">Sub Region:</span>{" "}
+                <span className={stylesCountriesTwo.tittleBold}>Sub Region:</span>{" "}
                 {countrie.subregion}
               </h3>
               <h3>
-                <span className="tittleBold">Capital:</span> {countrie.capital}
+                <span className={stylesCountriesTwo.tittleBold}>Capital:</span> {countrie.capital}
               </h3>
             </div>
 
-            <div className="columnTwo">
+            <div className={stylesCountriesTwo.columnTwo}>
               <h3>
-                <span className="tittleBold">Top Level Domain:</span>{" "}
+                <span className={stylesCountriesTwo.tittleBold}>Top Level Domain:</span>{" "}
                 {countrie.topLevelDomain}
               </h3>
               <h3>
-                <span className="tittleBold">Currencies:</span>{" "}
+                <span className={stylesCountriesTwo.tittleBold}>Currencies:</span>{" "}
                 {countrie.currencies?.map((currency) => currency.name)}
               </h3>
               <h3>
-                <span className="tittleBold">Languages: </span>
+                <span cclassName={stylesCountriesTwo.tittleBold}>Languages: </span>
                 {countrie.languages
                   ?.map((language) => language.name)
                   .join(", ")}
@@ -98,13 +99,13 @@ const InfoCountrieComponent = () => {
             </div>
           </section>
 
-          <section className="borderCountries">
+          <section className={stylesCountriesTwo.borderCountries}>
             <h3>
-              <span className="tittleBold">Border Countries: </span>
+              <span className={stylesCountriesTwo.tittleBold}>Border Countries: </span>
             </h3>
 
             {countrie.borders?.map((border) => (
-              <div className="borderCou">
+              <div className={stylesCountriesTwo.borderCou}>
                 <h3>{border}</h3>
               </div>
             ))}

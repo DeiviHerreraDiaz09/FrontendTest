@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "./CountriesComponent.css";
+import stylesCountries from "./CountriesComponent.module.css";
 
 const CountriesComponent = () => {
   const [dataCountries, setDataCountries] = useState([]);
@@ -56,19 +56,19 @@ const CountriesComponent = () => {
   }, []);
 
   return (
-    <div className={`countriescomponent ${darkMode ? "dark" : ""}`}>
+    <div className={`${stylesCountries.countriescomponent} ${darkMode ? stylesCountries.dark : ""}`}>
       <header>
         <h1>Where in the world?</h1>
-        <div className="modeScreen" onClick={handleDarkModeToggle}>
-          <div className="moonMood"></div>
-          <h3 className="tittleDarkMode">Dark Mode</h3>
+        <div className={stylesCountries.modeScreen} onClick={handleDarkModeToggle}>
+          <div className={stylesCountries.moonMood}></div>
+          <h3 className={stylesCountries.tittleDarkMode}>Dark Mode</h3>
         </div>
       </header>
 
-      <div className="filters">
-        <div className="search">
-          <div className="inputModified">
-            <div className="loupeImg"></div>
+      <div className={stylesCountries.filters}>
+        <div className={stylesCountries.search}>
+          <div className={stylesCountries.inputModified}>
+            <div className={stylesCountries.loupeImg}></div>
             <input
               type="text"
               placeholder="Search for a country..."
@@ -77,10 +77,10 @@ const CountriesComponent = () => {
             />
           </div>
         </div>
-        <div className="filterRegions">
+        <div className={stylesCountries.filterRegions}>
           <select
             name="regions"
-            className="regions"
+            className={stylesCountries.regions}
             onChange={handleRegionChange}
           >
             <option selected disabled value="0">
@@ -98,27 +98,27 @@ const CountriesComponent = () => {
         </div>
       </div>
 
-      <div className="countriesList">
+      <div className={stylesCountries.countriesList}>
         {filteredCountries.map((countrie) => (
           <div
-            className="cardCountries"
+            className={stylesCountries.cardCountries}
             key={countrie.name}
             onClick={() => handleCountrySelect(countrie)}
           >
-            <div className="imgCountrie">
+            <div className={stylesCountries.imgCountrie}>
               <img src={countrie.flag} alt="" />
             </div>
-            <div className="infoCountrie">
-              <h4 className="countrieTittle">{countrie.name}</h4>
+            <div className={stylesCountries.infoCountrie}>
+              <h4 className={stylesCountries.countrieTittle}>{countrie.name}</h4>
               <h4>
-                <span className="tittleBold">Population: </span>
+                <span className={stylesCountries.tittleBold}>Population: </span>
                 {countrie.population.toLocaleString("de-DE")}
               </h4>
               <h4>
-                <span className="tittleBold">Region:</span> {countrie.region}
+                <span className={stylesCountries.tittleBold}>Region:</span> {countrie.region}
               </h4>
               <h4>
-                <span className="tittleBold">Capital:</span> {countrie.capital}
+                <span className={stylesCountries.tittleBold}>Capital:</span> {countrie.capital}
               </h4>
             </div>
           </div>
