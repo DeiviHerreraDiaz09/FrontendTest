@@ -13,8 +13,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <Router>
       <Routes>
         <Route path="/Countries" element={<CountriesComponent />} />
-        <Route path="/qr" element={<QrCode />} />
         <Route path="/card" element={<CardComponent />} />
+        <Route path="/qr" element={<QrCode />} />
         <Route path="/omelette" element={<OmeletteRecipe />} />
         <Route path="/expenses" element={<ExpensesComponent />} />
         <Route path="/infoCountrie/:countryName" element={<InfoCountrieComponentfrom />} />

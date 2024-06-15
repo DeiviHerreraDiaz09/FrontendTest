@@ -1,11 +1,10 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 
 .qrcode {
     width: 100%;
@@ -15,8 +14,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-
 }
 
 h4 {
@@ -24,7 +21,6 @@ h4 {
 }
 
 .card {
-
     height: 27rem;
     width: 18rem;
     border: 1px solid;
@@ -47,24 +43,18 @@ h4 {
     margin: 10px;
 }
 
-
 .TextOne {
-
     text-align: center;
     font-size: 21px;
     color: hsl(218, 44%, 22%);
     font-weight: 700;
     margin-bottom: 5px;
-
 }
 
 .TextTwo {
-
     text-align: center;
     font-size: 15px;
     color: hsl(220, 15%, 55%);
     font-weight: 300;
-
     margin-bottom: 20px;
-
-} */
+}
