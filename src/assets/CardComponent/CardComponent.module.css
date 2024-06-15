@@ -1,8 +1,13 @@
-/* @font-face {
+@font-face {
     font-family: 'fontCard';
     src: url("fonts/Outfit-VariableFont_wght.ttf");
 }
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
 .cardcomponent {
     box-sizing: border-box;
@@ -43,6 +48,40 @@
     position: relative;
 }
 
+.title {
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    font-family: "fontCard";
+    cursor: pointer;
+}
+
+.title:hover {
+    color: hsl(178, 100%, 50%);
+}
+
+.title:hover {
+    color: hsl(178, 100%, 50%);
+}
+
+.priceValue,
+.timeLeft {
+    font-size: 13px;
+    font-weight: 100;
+}
+
+.description {
+    color: hsl(0, 0%, 100%);
+    font-size: 13.5px;
+    font-weight: 100;
+    font-family: "fontCard";
+}
+
+.separator {
+    color: hsl(215, 32%, 27%);
+    border: 1px solid;
+}
+
 .cardImage::before {
     content: '';
     position: absolute;
@@ -76,36 +115,6 @@
 
 .cardImage:hover::after {
     opacity: 1;
-}
-
-
-h4 {
-    color: white;
-    font-size: 17px;
-    font-weight: 500;
-    font-family: "fontCard";
-    cursor: pointer;
-}
-
-h4:hover {
-    color: hsl(178, 100%, 50%);
-}
-
-h6 {
-    font-size: 13px;
-    font-weight: 100;
-}
-
-p {
-    color: hsl(0, 0%, 100%);
-    font-size: 13.5px;
-    font-weight: 100;
-    font-family: "fontCard";
-}
-
-hr {
-    color: hsl(215, 32%, 27%);
-    border: 1px solid;
 }
 
 .moreInformation {
@@ -147,7 +156,6 @@ hr {
     height: 100%;
 }
 
-
 .author {
     width: 100%;
     height: 2rem;
@@ -176,4 +184,18 @@ hr {
 
 .highlight:hover {
     color: hsl(178, 100%, 50%);
-} */
+}
+
+.authorName {
+    font-size: 13px;
+    font-weight: 100;
+}
+
+.highlight {
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.highlight:hover {
+    color: hsl(178, 100%, 50%);
+}
