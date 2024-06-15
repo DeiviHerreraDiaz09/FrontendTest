@@ -9,7 +9,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-import "./ExpensesComponent.css";
+import stylesExpenses from "./ExpensesComponent.module.css"
 
 const ExpensesComponent = () => {
   const [data, setData] = useState([]);
@@ -107,16 +107,16 @@ const ExpensesComponent = () => {
   }, []);
 
   return (
-    <div className="expensescomponent">
-      <div className="myBalance">
-        <div className="count">
+    <div className={stylesExpenses.expensescomponent}>
+      <div className={stylesExpenses.myBalance}>
+        <div className={stylesExpenses.count}>
           <h3>My balance</h3>
           <h1>${money}</h1>
         </div>
-        <div className="logo"></div>
+        <div className={stylesExpenses.logo}></div>
       </div>
 
-      <div className="cardBalance">
+      <div className={stylesExpenses.cardBalance}>
         <h1>Spending - Last 7 days</h1>
 
         {data.length > 0 ? (
@@ -125,14 +125,14 @@ const ExpensesComponent = () => {
           <p>Loading...</p>
         )}
 
-        <hr />
+        <hr className={stylesExpenses.separatorExpenses} />
 
-        <div className="totalMonth">
-          <div className="total">
+        <div className={stylesExpenses.totalMonth}>
+          <div className={stylesExpenses.total}>
             <h3>Total this month</h3>
             <h1>{hoveredTotal}</h1>
           </div>
-          <div className="percentage">
+          <div className={stylesExpenses.percentage}>
             <h3>+2.4%</h3>
             <h3>From last month</h3>
           </div>
