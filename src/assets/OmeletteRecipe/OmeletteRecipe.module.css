@@ -1,4 +1,4 @@
-/* @font-face {
+@font-face {
     font-family: recipeFamily;
     src: url("fonts/outfit/Outfit-VariableFont_wght.ttf");
 }
@@ -7,7 +7,6 @@
     font-family: recipeFamily2;
     src: url("fonts/young-serif/YoungSerif-Regular.ttf");
 }
-
 
 .omeletterecipe {
     margin: 0;
@@ -25,7 +24,6 @@ p {
     font-size: 14px;
     margin-bottom: 10px;
 }
-
 
 .recipe {
     margin-top: 5rem;
@@ -81,7 +79,6 @@ p {
     color: hsl(14, 45%, 36%);
     margin-top: 10px;
     margin-bottom: 10px;
-
 }
 
 .IngredientsSection {
@@ -124,7 +121,6 @@ td:nth-child(2) {
     font-size: 14px;
 }
 
-
 ul {
     list-style: none;
 }
@@ -152,4 +148,4 @@ ol li::before {
 .spanGray {
     color: hsl(24, 5%, 18%);
     font-weight: 600;
-} */
+}

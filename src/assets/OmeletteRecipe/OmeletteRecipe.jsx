@@ -1,12 +1,12 @@
-import "./OmeletteRecipe.css";
+import stylesOmelette from "./OmeletteRecipe.module.css"
 
-const OmeletteRecipe = ({}) => {
+const OmeletteRecipe = ({ }) => {
   return (
-    <div className="omeletterecipe">
-      <div className="recipe">
-        <div className="recipeImg"></div>
+    <div className={stylesOmelette.omeletterecipe}>
+      <div className={stylesOmelette.recipe}>
+        <div className={stylesOmelette.recipeImg}></div>
 
-        <h2 className="tittleRecipe">Simple Omelette Recipe</h2>
+        <h2 className={stylesOmelette.tittleRecipe}>Simple Omelette Recipe</h2>
 
         <p>
           An easy and quick dish, perfect for any meal. This classic omellette
@@ -14,23 +14,23 @@ const OmeletteRecipe = ({}) => {
           your choise of cheese, vegetables, or meats.
         </p>
 
-        <div className="preparationTime">
+        <div className={stylesOmelette.preparationTime}>
           <h3>Preparation time</h3>
           <ul>
             <li>
-              <span className="spanGray">Total</span>: Approximately 10 minutes
+              <span className={stylesOmelette.spanGray}>Total</span>: Approximately 10 minutes
             </li>
             <li>
-              <span className="spanGray">Preparation </span>: 5 minutes
+              <span className={stylesOmelette.spanGray}>Preparation </span>: 5 minutes
             </li>
             <li>
-              <span className="spanGray">Cooking </span>: 5 minutes
+              <span className={stylesOmelette.spanGray}>Cooking </span>: 5 minutes
             </li>
           </ul>
         </div>
 
-        <h2 className="TitleSection">Ingredients</h2>
-        <ul className="IngredientsSection">
+        <h2 className={stylesOmelette.TitleSection}>Ingredients</h2>
+        <ul className={stylesOmelette.IngredientsSection}>
           <li>2-3 large eggs</li>
           <li>Salt, to taste</li>
           <li>Pepper, to taste</li>
@@ -40,39 +40,39 @@ const OmeletteRecipe = ({}) => {
           </li>
         </ul>
         <hr />
-        <h2 className="TitleSection">Instructions</h2>
-        <ol className="InstructionsSection">
+        <h2 className={stylesOmelette.TitleSection}>Instructions</h2>
+        <ol className={stylesOmelette.InstructionsSection}>
           <li>
-            <span className="spanGray"> Beat the eggs </span>: In a bowl, beat
+            <span className={stylesOmelette.spanGray}> Beat the eggs </span>: In a bowl, beat
             the eggs with a pinch of salt and pepper ultil they are well mixed,
             Yoy can add a tablespoon of water or milk for a fluffier texture.
           </li>
           <li>
-            <span className="spanGray">Heat the pan </span>: Place a non-stick
+            <span className={stylesOmelette.spanGray}>Heat the pan </span>: Place a non-stick
             frying pan over medium heat and add butter or oil
           </li>
           <li>
-            <span className="spanGray"> Cook the omellette </span>: Once the
+            <span className={stylesOmelette.spanGray}> Cook the omellette </span>: Once the
             butter is melted and bubbling, pour in the eggs. Tilt the pan to
             ensure the eegs evenly coat the surface.
           </li>
           <li>
-            <span className="spanGray">Add fillings (optional) </span>: When the
+            <span className={stylesOmelette.spanGray}>Add fillings (optional) </span>: When the
             eggs begin to set at the edges but are still slightly runny in the
             middle, sprikle you chosen fillings over one half of the omelette.
           </li>
           <li>
-            <span className="spanGray">Fold and serve </span>: As the omellette
+            <span className={stylesOmelette.spanGray}>Fold and serve </span>: As the omellette
             contunues to cook, carefully lift one edge and Ffold it over the
             fillings. Let it cook for anothe minute, then slide it onto a plate.
           </li>
           <li>
-            <span className="spanGray">Enjoy </span>: Serve hot, with additional
+            <span className={stylesOmelette.spanGray}>Enjoy </span>: Serve hot, with additional
             salt and pepper if needed
           </li>
         </ol>
         <hr />
-        <h2 className="TitleSection">Nutrition</h2>
+        <h2 className={stylesOmelette.TitleSection}>Nutrition</h2>
         <p>
           The table below shows nutritional values per serving without the
           additional fillings

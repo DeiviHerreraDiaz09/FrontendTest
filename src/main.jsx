@@ -13,11 +13,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <Router>
       <Routes>
         <Route path="/Countries" element={<CountriesComponent />} />
+        <Route path="/infoCountrie/:countryName" element={<InfoCountrieComponentfrom />} />
         <Route path="/card" element={<CardComponent />} />
         <Route path="/qr" element={<QrCode />} />
         <Route path="/omelette" element={<OmeletteRecipe />} />
         <Route path="/expenses" element={<ExpensesComponent />} />
-        <Route path="/infoCountrie/:countryName" element={<InfoCountrieComponentfrom />} />
       </Routes>
     </Router>
   </React.StrictMode>
