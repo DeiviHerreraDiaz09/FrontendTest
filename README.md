@@ -36,7 +36,9 @@ Inicia la aplicación.
 ```
 npm run dev
 ```
-Abre tu navegador y ve a http://localhost:5173 para ver la aplicación en funcionamiento.
+Abre tu navegador y ve a http://localhost:5173 para ver la aplicación en funcionamiento y su menu para direccionarse a los diferentes mini - proyectos.
+
+![image](https://github.com/DeiviHerreraDiaz09/FrontendTest/assets/154428353/25fe5f26-adf2-4166-9278-d7c56e1c6e4c)
 
 ## PROYECTO 1 - [**QrCode**](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H)
 
